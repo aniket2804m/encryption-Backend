@@ -9,6 +9,10 @@ app.use(cors());
 
 const SECRET_KEY = 'mysecretKey123';
 
+app.get('/', (req, res) => {
+    res.send("Backend is running");
+});
+
 app.post('/encrypt', (req, res) => {
     const { text } = req.body;
 
